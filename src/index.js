@@ -289,3 +289,94 @@ headerBottomNavUlLiList.forEach(function(ele){
 
     const main=document.createElement("main")
     
+    //notice
+
+    const mainNotice=document.createElement("section")
+    mainNotice.className="container d-flex my-2 gap-2"
+    const mainNoticebtn=document.createElement("button")
+    mainNoticebtn.innerText="Announcement"
+    mainNoticebtn.style.background="#EEC641"
+    mainNoticebtn.className="btn text-white"
+
+    //create marque tag
+
+    const mainNoticeMarquee=document.createElement("marquee")
+    mainNoticeMarquee.innerHTML="Imp Notice: Dates have been Extended for various courses of CET registration for A.Y 2023-24 (English/Marathi)"
+    mainNoticeMarquee.style.background="#F1F1F1"
+    mainNoticeMarquee.setAttribute('scrollamount', 15, 0);
+    mainNoticeMarquee.behavior=""
+    mainNoticeMarquee.direction=""
+    mainNoticeMarquee.style.lineHeight="2.3"
+    mainNoticeMarquee.className="m-0 p-0"
+
+    // Create a new keyword to pop infinite
+
+    const newInfinite=document.createElement("img")
+    newInfinite.src="../image/blinknew.gif"
+    newInfinite.style.marginLeft="5px"
+
+    mainNoticeMarquee.appendChild(newInfinite)
+    mainNotice.appendChild(mainNoticebtn)
+    mainNotice.appendChild(mainNoticeMarquee)
+    main.appendChild(mainNotice)
+    root.appendChild(main)
+
+    //Banner Start
+
+    const banner=document.createElement("div")
+    banner.style.width="100%"
+    banner.style.height="400px"
+    banner.style.display="flex"
+
+    //banner left
+
+    const bannerLeft=document.createElement("div")
+    bannerLeft.style.height="100%"
+    bannerLeft.style.width="75%"
+    bannerLeft.background="url(../image/State Common Entrance Test Cell _ Government of Maharashtra.mhtml)"
+    bannerLeft.className="position-relative"
+
+    //create number of department and courses
+
+    const bannerLeftCourseNumbers=document.createElement("div")
+    bannerLeftCourseNumbers.className="row position-absolute m-0"
+    bannerLeftCourseNumbers.style.width="100%"
+
+    function CardNumber(title, descriptionText, background,columns){
+      const card=document.createElement("div")
+      card.className=`col-12 col-lg-${columns || 4} text-center text-white py-2`
+
+      if (background) {
+        card.style.background=background
+      }
+      //create number
+
+    const titleH5=document.createElement("h5")
+    titleH5.innerText="0"
+    titleH5.className="count"
+    titleH5.setAttribute("data-count", title)
+    titleH5.style.fontSize="30px"
+
+    //create description 
+
+    const description=document.createElement("p")
+    description.className="m-0"
+    description.innerText=descriptionText
+
+    //appending childs
+
+    card.appendChild(titleH5)
+    card.appendChild(description)
+
+    return card
+    }
+
+    bannerLeftCourseNumbers.appendChild(CardNumber(6,"Number of Department"))
+    bannerLeftCourseNumbers.appendChild(CardNumber(19,"Number of CETs","#163269"))
+    bannerLeftCourseNumbers.appendChild(CardNumber(61,"Number of Courses"))
+
+    // bannerLeftCourseNumbers.appendChild(card)
+    // bannerLeft.appendChild(bannerLeftCourseNumbers)
+    // banner.appendChild(bannerLeft)
+    // main.appendChild(banner)
+    
