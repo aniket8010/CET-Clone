@@ -1,12 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="/image/cet_cell-removebg-preview.png">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/image/cet_cell-removebg-preview.png" />
+  </head>
+  <body>
     <div id="root"></div>
+    <script src="/src/jquery-3.7.1.min.js"></script>
     <script src="/src/index.js"></script>
-</body>
+    <script>
+      //Galarry Section
+
+      const gallary = document.createElement("section");
+      gallary.style.height = "100%";
+      gallary.style.background = "#163269";
+      $("main").append(gallary);
+      //adding class to the gallary
+      $(gallary).addClass("p-5");
+
+      const gallaryContainer = document.createElement("div");
+      gallaryContainer.className =
+        "container border border-warning  position-relative";
+
+      const gallaryTitle = document.createElement("h2");
+      $(gallaryTitle).text("Gallary");
+      gallaryTitle.style.background = "#163269";
+      gallaryTitle.style.top="-21px"
+      gallaryTitle.className = "text-white px-3";
+
+      $(gallaryContainer).html(
+        `<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+        <div class="row">
+            <div class="col-12 col-lg-4 p-5 ms-auto">
+                <img src="./image/slide 1.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="col-12 col-lg-4 p-5 me-auto">
+                <img src="./image/slide 2.jpg" class="d-block w-100" alt="...">
+            </div>
+        </div>
+    </div>
+    <div class="carousel-item">
+        <div class="row">
+            <div class="col-12 col-lg-4 p-5 ms-auto">
+                <img src="./image/slide 3.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="col-12 col-lg-4 p-5 me-auto">
+                <img src="./image/slide 4.jpg" class="d-block w-100" alt="...">
+            </div>
+        </div>
+    </div>
+    <div class="carousel-item">
+        <div class="row">
+            <div class="col-12 col-lg-4 p-5 ms-auto">
+                <img src="./image/slide 5.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="col-12 col-lg-4 p-5 me-auto">
+                <img src="./image/slide 6.jpg" class="d-block w-100" alt="...">
+            </div>
+        </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<div class="LoadMoreBtn mb-5 px-3">
+        <button style="background: #204590;" class="text-white py-2 px-4 rounded-1 border-0">Load More</button>
+    </div>
+`
+      );
+      $(gallaryContainer).append(gallaryTitle);
+      $(gallaryTitle).addClass("position-absolute");
+      $(gallary).append(gallaryContainer);
+    </script>
+  </body>
 </html>

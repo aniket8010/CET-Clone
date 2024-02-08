@@ -16,7 +16,7 @@ document.head.appendChild(indexCssLink);
 const bootStrap = document.createElement("link");
 bootStrap.rel = "stylesheet";
 bootStrap.href =
-  "https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css";
+  "https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css";
 
 document.head.appendChild(bootStrap);
 
@@ -342,7 +342,8 @@ banner.style.display = "flex";
 const bannerLeft = document.createElement("div");
 bannerLeft.style.height = "100%";
 bannerLeft.style.width = "75%";
-bannerLeft.style.background = "url(../image/GOVERNMENT-OF-MAHARASHTRA-22-1.png)"
+bannerLeft.style.background =
+  "url(../image/GOVERNMENT-OF-MAHARASHTRA-22-1.png)";
 bannerLeft.className = "position-relative";
 bannerLeft.style.backgroundRepeat = "no-repeat";
 bannerLeft.style.backgroundSize = "cover";
@@ -386,7 +387,9 @@ function CardNumber(title, descriptionText, background, columns) {
 }
 
 bannerLeftCourseNumbers.appendChild(CardNumber(6, "Number of Department"));
-bannerLeftCourseNumbers.appendChild( CardNumber(19, "Number of CETs", "#163269"));
+bannerLeftCourseNumbers.appendChild(
+  CardNumber(19, "Number of CETs", "#163269")
+);
 bannerLeftCourseNumbers.appendChild(CardNumber(61, "Number of Courses"));
 
 //create Right banner
@@ -407,10 +410,11 @@ function IconTitleCard(icon, titlestring, background) {
   let LeftBox = document.createElement("div");
   LeftBox.style.height = "70px";
   LeftBox.style.width = "70px";
-  LeftBox.className ="bg-white rounded-pill d-flex  align-items-center justify-content-center";
+  LeftBox.className =
+    "bg-white rounded-pill d-flex  align-items-center justify-content-center";
   //create one more div to icon backgrond
   const Leftsubdiv = document.createElement("div");
-  Leftsubdiv.style.background = background
+  Leftsubdiv.style.background = background;
   Leftsubdiv.style.height = "50px";
   Leftsubdiv.style.width = "50px";
 
@@ -487,99 +491,99 @@ banner.appendChild(bannerRight);
 bannerRight.appendChild(bannerRightCourseNumbers);
 main.appendChild(banner);
 
-const counts=document.querySelectorAll(".count")
-counts.forEach(function(counter){
+const counts = document.querySelectorAll(".count");
+counts.forEach(function (counter) {
+  function updatecounter() {
+    const finalValue = Number(counter.getAttribute("data-count"));
+    const oldValue = Number(counter.innerText.replace(",", ""));
+    const incrementValue = finalValue / 100;
 
-  function updatecounter () {
-    const finalValue=Number(counter.getAttribute("data-count"))
-    const oldValue=Number(counter.innerText.replace(",",""))
-    const incrementValue=finalValue/100
-
-    if (oldValue<finalValue){
-      counter.innerText=Math.ceil(incrementValue+oldValue).toLocaleString()
-      setTimeout(updatecounter,1)
-    } else{
-      counter.innerText=`${finalValue>1000 ? `${finalvalue.toLocaleString()} +` :finalValue}`
-
+    if (oldValue < finalValue) {
+      counter.innerText = Math.ceil(incrementValue + oldValue).toLocaleString();
+      setTimeout(updatecounter, 1);
+    } else {
+      counter.innerText = `${
+        finalValue > 1000 ? `${finalValue.toLocaleString()}+` : finalValue
+      }`;
     }
   }
 
-  updatecounter()
-})
-
+  updatecounter();
+});
 
 // About section start
 
-const aboutSection=document.createElement("div")
-aboutSection.style.background="url(../image/aboutBg.jpg"
-aboutSection.style.height="1500px"
-aboutSection.style.width="100%"
-aboutSection.style.backgroundPosition = "center 0px"
-aboutSection.style.backgroundSize="cover"
-aboutSection.style.backgroundAttachment="fixed"
+const aboutSection = document.createElement("div");
+aboutSection.style.background = "url(../image/aboutBg.jpg";
+aboutSection.style.height = "100";
+aboutSection.style.width = "100%";
+aboutSection.style.backgroundPosition = "center 0px";
+aboutSection.style.backgroundSize = "cover";
+aboutSection.style.backgroundAttachment = "fixed";
 // aboutSection.style.backgroundColor="white"
 // aboutSection.style.opacity="0.1"
 
-const aboutSectionOverlay=document.createElement("div")
-aboutSectionOverlay.style.background="#ffffffbd"
-aboutSectionOverlay.style.padding="70px 0"
+const aboutSectionOverlay = document.createElement("div");
+aboutSectionOverlay.style.background = "#ffffffbd";
+aboutSectionOverlay.style.padding = "70px 0";
 
-const aboutSectionContainer=document.createElement("div")
-aboutSectionContainer.className="row w-75 mx-auto"
-aboutSectionContainer.style.marginTop="84px"
+const aboutSectionContainer = document.createElement("div");
+aboutSectionContainer.className = "row w-75 mx-auto";
+aboutSectionContainer.style.marginTop = "84px";
 
 //create left image
 
-const aboutSectionContainerLeft=document.createElement("div")
-aboutSectionContainerLeft.className="col-12 col-lg-5"
+const aboutSectionContainerLeft = document.createElement("div");
+aboutSectionContainerLeft.className = "col-12 col-lg-5";
 //img tag
-const aboutSectionContainerLeftDiv=document.createElement("div")
-aboutSectionContainerLeftDiv.style.borderLeft="12px solid #163269"
-aboutSectionContainerLeftDiv.style.borderBottom="12px solid #163269"
+const aboutSectionContainerLeftDiv = document.createElement("div");
+aboutSectionContainerLeftDiv.style.borderLeft = "12px solid #163269";
+aboutSectionContainerLeftDiv.style.borderBottom = "12px solid #163269";
 
-const aboutSectionContainerLeftImg=document.createElement("img")
-aboutSectionContainerLeftImg.src="../image/abountLeft.png"
-aboutSectionContainerLeftImg.alt=""
-aboutSectionContainerLeftImg.style.height="245px"
-aboutSectionContainerLeftImg.style.width="100%"
+const aboutSectionContainerLeftImg = document.createElement("img");
+aboutSectionContainerLeftImg.src = "../image/abountLeft.png";
+aboutSectionContainerLeftImg.alt = "";
+aboutSectionContainerLeftImg.style.height = "245px";
+aboutSectionContainerLeftImg.style.width = "100%";
 
 //create Right part
-const aboutSectionContainerRight=document.createElement("div")
-aboutSectionContainerRight.className="col-12 col-lg-7"
+const aboutSectionContainerRight = document.createElement("div");
+aboutSectionContainerRight.className = "col-12 col-lg-7";
 
 //right headings
 
-const aboutSectionContainerRightH2=document.createElement("h2")
-aboutSectionContainerRightH2.innerText="About CET Cell"
-aboutSectionContainerRightH2.style.color="#163269"
-const aboutSectionContainerRightP1=document.createElement("p")
-aboutSectionContainerRightP1.innerText="The Government of Maharashtra has established State Common Entrance Test Cell as per Section 10 of the Maharashtra Unaided Private Professional Educational Institutions (Regulation of Admissions and Fees) Act ,2015. The CET Cell conducts various entrance exams for Admission to Professional courses in the state of Maharashtra, India."
-const aboutSectionContainerRightP2=document.createElement("p")
-aboutSectionContainerRightP2.innerText="Its primary purpose is to facilitate the admission process for Professional courses such as Engineering, Management, Pharmacy, Agriculture, law, Medical, AYUSH & Fine Arts ."
+const aboutSectionContainerRightH2 = document.createElement("h2");
+aboutSectionContainerRightH2.innerText = "About CET Cell";
+aboutSectionContainerRightH2.style.color = "#163269";
+const aboutSectionContainerRightP1 = document.createElement("p");
+aboutSectionContainerRightP1.innerText =
+  "The Government of Maharashtra has established State Common Entrance Test Cell as per Section 10 of the Maharashtra Unaided Private Professional Educational Institutions (Regulation of Admissions and Fees) Act ,2015. The CET Cell conducts various entrance exams for Admission to Professional courses in the state of Maharashtra, India.";
+const aboutSectionContainerRightP2 = document.createElement("p");
+aboutSectionContainerRightP2.innerText =
+  "Its primary purpose is to facilitate the admission process for Professional courses such as Engineering, Management, Pharmacy, Agriculture, law, Medical, AYUSH & Fine Arts .";
 
-
-aboutSectionContainerLeftDiv.appendChild(aboutSectionContainerLeftImg)
-aboutSectionContainerLeft.appendChild(aboutSectionContainerLeftDiv)
-aboutSectionContainerRight.appendChild(aboutSectionContainerRightH2)
-aboutSectionContainerRight.appendChild(aboutSectionContainerRightP1)
-aboutSectionContainerRight.appendChild(aboutSectionContainerRightP2)
-aboutSectionContainer.appendChild(aboutSectionContainerLeft)
-aboutSectionContainer.appendChild(aboutSectionContainerRight)
-aboutSectionOverlay.appendChild(aboutSectionContainer)
-aboutSection.appendChild(aboutSectionOverlay)
-main.appendChild(aboutSection)
+aboutSectionContainerLeftDiv.appendChild(aboutSectionContainerLeftImg);
+aboutSectionContainerLeft.appendChild(aboutSectionContainerLeftDiv);
+aboutSectionContainerRight.appendChild(aboutSectionContainerRightH2);
+aboutSectionContainerRight.appendChild(aboutSectionContainerRightP1);
+aboutSectionContainerRight.appendChild(aboutSectionContainerRightP2);
+aboutSectionContainer.appendChild(aboutSectionContainerLeft);
+aboutSectionContainer.appendChild(aboutSectionContainerRight);
+aboutSectionOverlay.appendChild(aboutSectionContainer);
+aboutSection.appendChild(aboutSectionOverlay);
+main.appendChild(aboutSection);
 
 //Table Section satrt
 
-const tableSection=document.createElement("div")
-tableSection.style.background="#EAEAEA"
-tableSection.style.height="400px"
+const tableSection = document.createElement("div");
+tableSection.style.background = "#EAEAEA";
+tableSection.style.height = "100";
 
 //menu container
 
-const menuContainer=document.createElement("div")
-menuContainer.className="w-75 mx-auto py-3"
-menuContainer.innerHTML=`<nav class="nav justify-content-between" style="font-size:16px">
+const menuContainer = document.createElement("div");
+menuContainer.className = "w-75 mx-auto py-3";
+menuContainer.innerHTML = `<nav class="nav justify-content-between" style="font-size:16px">
 <button type="button" class="px-4 py-2 bg-white border-0  a_about_btn" aria-current="page">All</button>
 <button type="button" class="px-4 py-2 bg-white border-0  a_about_btn">Technical Education</button>
 <button type="button" class="px-4 py-2 bg-white border-0  a_about_btn">Higher Education</button>
@@ -587,39 +591,647 @@ menuContainer.innerHTML=`<nav class="nav justify-content-between" style="font-si
 <button type="button" class="px-4 py-2 bg-white border-0  a_about_btn">Fine Art Education</button>
 <button type="button" class="px-4 py-2 bg-white border-0  a_about_btn">Medical Education</button>
 <button type="button" class="px-4 py-2 bg-white border-0  a_about_btn">AYUSH</button>
-</nav>`
+</nav>`;
 
-window.onload=function(){
-  const aboutBtn=document.querySelector(".a_about_btn")
-  aboutBtn.classList.remove("bg-white")
-  aboutBtn.classList.add("bg-warning")
+window.onload = function () {
+  const aboutBtn = document.querySelector(".a_about_btn");
+  aboutBtn.classList.remove("bg-white");
+  aboutBtn.classList.add("bg-warning");
+  dynamicData([
+    {
+      id: 1,
+      course: "LLB 3 Yrs",
+      subject: "Important Notice for Preparatory Passed Candidates.",
+      isNew: true,
+      date: "02/02/2024",
+      download:
+        "https://cetcell.mahacet.org/wp-content/uploads/2023/12/Important-Notices_Preperatory-CET-2024.pdf",
+    },
+    {
+      id: 2,
+      course: "All CET's",
+      subject: "User Manual Video for CET Registration A.Y. 2024-25",
+      isNew: true,
+      date: "31/01/2024	",
+      download: "https://www.youtube.com/watch?v=UuJSWbIoyGQ",
+    },
+    {
+      id: 3,
+      course: "MAH- AAC (Fine Art)",
+      subject:
+        "MAH- AAC (Fine Art) CET 2024 Online Application Notice No.1 (English/Marathi)",
+      isNew: false,
+      date: "30/01/2024	",
+      download:
+        "chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://cetcell.mahacet.org/wp-content/uploads/2023/12/Online-Application-Notice.pdf",
+    },
+    {
+      id: 4,
+      course: "All CET's	",
+      subject:
+        "Imp Notice: Dates have been Extended for various courses of CET registration for A.Y 2024-25 (English/Marathi)",
+      isNew: true,
+      date: "29/01/2024	",
+      download:
+        "chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://cetcell.mahacet.org/wp-content/uploads/2023/12/Extenstion-Notice.pdf",
+    },
+    {
+      id: 5,
+      course: "Higher Courses",
+      subject:
+        "IMP : CLARITY ABOUT BED (2Yr. RegularCourse) , BED-MED (3Yr.Int.Course) and Ba/BScBEd (4Yr. Int.Course ).",
+      date: "12/01/2024	",
+      download:
+        "chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://cetcell.mahacet.org/wp-content/uploads/2023/12/Public-Notice.pdf",
+    },
+    {
+      id: 6,
+      course: "All CET's",
+      subject:
+        "As per the new rules for A.Y. 2024-25, the fee structure for CET Registrations for Transgender and Orphan candidates will be the same as that for the Reserved category.",
+      date: "11/01/2024 ",
+    },
+    {
+      id: 7,
+      course: "All CET's",
+      subject: "Activity Schedule for all CET Registration for A.Y. 2024-25",
+      date: "11/01/2024	",
+      download:
+        "chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://cetcell.mahacet.org/wp-content/uploads/2023/12/English-Notice-CET-2024.pdf",
+    },
+    {
+      id: 8,
+      course: "MHT CET, MBA/MMS, MCA, M.Arch, M.HMCT, B.HMCT, B.Design",
+      subject:
+        "Click Here To View Syllabus of All Courses Under Technical Education A.Y. 2024-25",
+      date: "01/01/2024",
+      download:
+        "chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://cetcell.mahacet.org/wp-content/uploads/2023/08/Technical_Education_CET_syllabus2024-25.pdf",
+    },
+    {
+      id: 9,
+      course: "All CET's",
+      subject:
+        "Updated Tentative Schedule for All Common Entrance Tests A.Y. 2024-25",
+      date: "13/12/2023	",
+      download:
+        "chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://cetcell.mahacet.org/wp-content/uploads/2023/08/CETCELL_Tentative_CET_Schedule2024-25.pdf",
+    },
+  ]);
+};
+
+function dynamicData(tableAllData = []) {
+  tableAllData.forEach(function (ele) {
+    const tableBodyTr = document.createElement("tr");
+    const tableBodyTrData1 = document.createElement("td");
+    tableBodyTrData1.innerText = ele.id;
+    tableBodyTrData1.style.textAlign = "center";
+    const tableBodyTrData2 = document.createElement("td");
+    tableBodyTrData2.innerText = ele.course;
+    const tableBodyTrData3 = document.createElement("td");
+    tableBodyTrData3.innerText = ele.subject;
+    //create img gift
+    const newImg = document.createElement("img");
+    newImg.src = "../image/blinknew.gif";
+    newImg.alt = "";
+    if (ele.isNew) {
+      tableBodyTrData3.appendChild(newImg);
+    }
+
+    const tableBodyTrData4 = document.createElement("td");
+    tableBodyTrData4.innerText = ele.date;
+    const tableBodyTrData5 = document.createElement("td");
+    tableBodyTrData5.style.textAlign = "center";
+    tableBodyTrData5.style.cursor = "pointer";
+    const openLink = `<a href="${ele.download}" target="_blank"><i class="fa fa-file-pdf-o fw-bold" aria-hidden="true"></i></a>`;
+
+    tableBodyTrData5.innerHTML = openLink;
+    tableBodyTr.appendChild(tableBodyTrData1);
+    tableBodyTr.appendChild(tableBodyTrData2);
+    tableBodyTr.appendChild(tableBodyTrData3);
+    tableBodyTr.appendChild(tableBodyTrData4);
+    tableBodyTr.appendChild(tableBodyTrData5);
+    tableBody.appendChild(tableBodyTr);
+  });
 }
 
-document.addEventListener("click",function(event){
-  const isBtn=event.target.classList.contains("a_about_btn")
-  if (isBtn){
-    const existingBtn=document.querySelectorAll(".a_about_btn")
-    existingBtn.forEach((ele)=>{
-      ele.classList.add("bg-white")
-      const isExist=ele.classList.contains("bg-warning")
+document.addEventListener("click", function (event) {
+  const isBtn = event.target.classList.contains("a_about_btn");
+  if (isBtn) {
+    const title = event.target.innerText;
+    const existingBtn = document.querySelectorAll(".a_about_btn");
+    existingBtn.forEach((ele) => {
+      ele.classList.add("bg-white");
+      const isExist = ele.classList.contains("bg-warning");
       if (isExist) {
-        event.target.classList.add("bg-white")
-        ele.classList.remove("bg-warning")
+        event.target.classList.add("bg-white");
+        ele.classList.remove("bg-warning");
       }
-    })
-    event.target.classList.remove("bg-white")
-    event.target.classList.add("bg-warning")
-  }
-})
+    });
+    event.target.classList.remove("bg-white");
+    event.target.classList.add("bg-warning");
+    tableBody.innerHTML = "";
 
-tableSection.appendChild(menuContainer)
-aboutSection.appendChild(tableSection)
+    switch (title) {
+      case "Technical Education":
+        return dynamicData([
+          {
+            id: 1,
+            course: "All CET’s",
+            subject:
+              "Imp Notice: Dates have been Extended for various courses of CET registration for A.Y 2024-25 (English/Marathi) Dated 06-02-2024",
+            date: "06/02/2024	",
+            download:
+              "chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://cetcell.mahacet.org/wp-content/uploads/2023/12/CET-Reg-2nd-Extenstion-Notice-1.pdf",
+          },
+          {
+            id: 2,
+            course: "All CET's",
+            subject: "User Manual Video for CET Registration A.Y. 2024-25",
+            date: "31/01/2024	",
+            download: "https://www.youtube.com/watch?v=UuJSWbIoyGQ",
+          },
+          {
+            id: 3,
+            course: "All CET's",
+            subject:
+              "Imp Notice: Dates have been Extended for various courses of CET registration for A.Y 2024-25 (English/Marathi) Dated 29-01-2024",
+            date: "29/01/2024	",
+            download:
+              "chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://cetcell.mahacet.org/wp-content/uploads/2023/12/Extenstion-Notice-1.pdf",
+          },
+          {
+            id: 4,
+            course: "All CET's	",
+            subject:
+              "As per the new rules for A.Y. 2024-25, the fee structure for CET Registrations for Transgender and Orphan candidates will be the same as that for the Reserved category.	",
+            date: "11/01/2024",
+          },
+          {
+            id: 5,
+            course: "All CET's",
+            subject:
+              "Activity Schedule for all CET Registration for A.Y. 2024-2.",
+            date: "11/01/2024",
+            download:
+              "chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://cetcell.mahacet.org/wp-content/uploads/2023/12/Public-Notice.pdf",
+          },
+          {
+            id: 6,
+            course: "MHT CET, MBA/MMS, MCA, M.Arch, M.HMCT, B.HMCT, B.Design",
+            subject:
+              "Click Here To View Syllabus of All Courses Under Technical Education A.Y. 2024-25	",
+            date: "01/01/2024",
+            download:
+              "chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://cetcell.mahacet.org/wp-content/uploads/2023/12/Public-Notice.pdf",
+          },
+          {
+            id: 7,
+            course: "All CET's",
+            subject:
+              "Updated Tentative Schedule for All Common Entrance Tests A.Y. 2024-25	",
+            date: "13/12/2023	",
+            download:
+              "chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://cetcell.mahacet.org/wp-content/uploads/2023/12/English-Notice-CET-2024.pdf",
+          },
+        ]);
+      case "Higher Education":
+        return dynamicData([
+          {
+            id: 1,
+            course: "All CET’s",
+            subject:
+              "Imp Notice: Dates have been Extended for various courses of CET registration for A.Y 2024-25 (English/Marathi) Dated 06-02-2024",
+            date: "06/02/2024	",
+            download:
+              "https://cetcell.mahacet.org/wp-content/uploads/2023/12/Important-Notices_Preperatory-CET-2024.pdf",
+          },
+          {
+            id: 2,
+            course: "LLB 3 Yrs",
+            subject:
+              "Important Notice for Preparatory Passed Candidates has been displayed on the website kindly check",
+            date: "02/02/2024	",
+            download: "https://www.youtube.com/watch?v=UuJSWbIoyGQ",
+          },
+          {
+            id: 3,
+            course: "LLB 3 Yrs",
+            subject: "Important Notice for Preparatory Passed Candidates.",
+            date: "02/02/2024	",
+            download:
+              "chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://cetcell.mahacet.org/wp-content/uploads/2023/12/Online-Application-Notice.pdf",
+          },
+          {
+            id: 4,
+            course: "All CET's	",
+            subject: "User Manual Video for CET Registration A.Y. 2024-25",
+            date: "31/01/2024	",
+            download:
+              "chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://cetcell.mahacet.org/wp-content/uploads/2023/12/Extenstion-Notice.pdf",
+          },
+          {
+            id: 5,
+            course: "All CET's",
+            subject:
+              "Imp Notice: Dates have been Extended for various courses of CET registration for A.Y 2024-25 (English/Marathi) Dated 29-01-2024	",
+            date: "29/01/2024",
+            download:
+              "chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://cetcell.mahacet.org/wp-content/uploads/2023/12/Public-Notice.pdf",
+          },
+          {
+            id: 6,
+            course: "Higher Courses",
+            subject:
+              "IMP : CLARITY ABOUT BED (2Yr. RegularCourse) , BED-MED (3Yr.Int.Course) and Ba/BScBEd (4Yr. Int.Course ).	",
+            date: "12/01/2024 ",
+            download:
+              "chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://cetcell.mahacet.org/wp-content/uploads/2023/12/Public-Notice.pdf",
+          },
+          {
+            id: 7,
+            course: "All CET's",
+            subject:
+              "As per the new rules for A.Y. 2024-25, the fee structure for CET Registrations for Transgender and Orphan candidates will be the same as that for the Reserved category.	",
+            date: "11/01/2024	",
+          },
+          {
+            id: 8,
+            course: "All CET's	",
+            subject:
+              "Activity Schedule for all CET Registration for A.Y. 2024-25",
+            date: "11/01/2024",
+            download:
+              "chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://cetcell.mahacet.org/wp-content/uploads/2023/08/Technical_Education_CET_syllabus2024-25.pdf",
+          },
+          {
+            id: 9,
+            course: "All CET's",
+            subject:
+              "Updated Tentative Schedule for All Common Entrance Tests A.Y. 2024-25",
+            date: "13/12/2023	",
+            download:
+              "chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://cetcell.mahacet.org/wp-content/uploads/2023/08/CETCELL_Tentative_CET_Schedule2024-25.pdf",
+          },
+        ]);
+      case "Agriculture Education":
+        return dynamicData([
+          {
+            id: 1,
+            course: "All CET’s	",
+            subject:
+              "Imp Notice: Dates have been Extended for various courses of CET registration for A.Y 2024-25 (English/Marathi) Dated 06-02-2024	",
+            date: "06/02/2024	",
+            download:
+              "https://cetcell.mahacet.org/wp-content/uploads/2023/12/Important-Notices_Preperatory-CET-2024.pdf",
+          },
+          {
+            id: 2,
+            course: "All CET's",
+            subject: "User Manual Video for CET Registration A.Y. 2024-25",
+            date: "31/01/2024	",
+            download: "https://www.youtube.com/watch?v=UuJSWbIoyGQ",
+          },
+          {
+            id: 3,
+            course: "All CET's",
+            subject:
+              "Imp Notice: Dates have been Extended for various courses of CET registration for A.Y 2024-25 (English/Marathi) Dated 29-01-2024	",
+            date: "29/01/2024	",
+            download:
+              "chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://cetcell.mahacet.org/wp-content/uploads/2023/12/Online-Application-Notice.pdf",
+          },
+          {
+            id: 4,
+            course: "All CET's	",
+            subject:
+              "As per the new rules for A.Y. 2024-25, the fee structure for CET Registrations for Transgender and Orphan candidates will be the same as that for the Reserved category.	",
+            date: "11/01/2024 ",
+          },
+          {
+            id: 5,
+            course: "All CET's	",
+            subject:
+              "Activity Schedule for all CET Registration for A.Y. 2024-25",
+            date: "11/01/2024		",
+            download:
+              "chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://cetcell.mahacet.org/wp-content/uploads/2023/12/Public-Notice.pdf",
+          },
+          {
+            id: 6,
+            course: "All CET's",
+            subject:
+              "Updated Tentative Schedule for All Common Entrance Tests A.Y. 2024-25	",
+            date: "13/12/2023	 ",
+          },
+        ]);
+      case "Fine Art Education":
+        return dynamicData([
+          {
+            id: 1,
+            course: "All CET’s	",
+            subject:
+              "Imp Notice: Dates have been Extended for various courses of CET registration for A.Y 2024-25 (English/Marathi) Dated 06-02-2024	",
+            date: "06/02/2024	",
+            download:
+              "https://cetcell.mahacet.org/wp-content/uploads/2023/12/Important-Notices_Preperatory-CET-2024.pdf",
+          },
+          {
+            id: 2,
+            course: "All CET's",
+            subject: "User Manual Video for CET Registration A.Y. 2024-25",
+            date: "31/01/2024	",
+            download: "https://www.youtube.com/watch?v=UuJSWbIoyGQ",
+          },
+          {
+            id: 3,
+            course: "MAH- AAC (Fine Art)",
+            subject:
+              "MAH- AAC (Fine Art) CET 2024 Online Application Notice No.1 (English/Marathi)",
+            date: "30/01/2024	",
+            download:
+              "chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://cetcell.mahacet.org/wp-content/uploads/2023/12/Online-Application-Notice.pdf",
+          },
+          {
+            id: 4,
+            course: "All CET's	",
+            subject:
+              "Imp Notice: Dates have been Extended for various courses of CET registration for A.Y 2024-25 (English/Marathi)",
+            date: "29/01/2024	",
+            download:
+              "chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://cetcell.mahacet.org/wp-content/uploads/2023/12/Extenstion-Notice.pdf",
+          },
+          {
+            id: 5,
+            course: "All CET's	",
+            subject:
+              "As per the new rules for A.Y. 2024-25, the fee structure for CET Registrations for Transgender and Orphan candidates will be the same as that for the Reserved category.	",
+            date: "11/01/2024  ",
+          },
+          {
+            id: 6,
+            course: "All CET's",
+            subject:
+              "Activity Schedule for all CET Registration for A.Y. 2024-25	",
+            date: "11/01/2024 ",
+          },
+          {
+            id: 7,
+            course: "All CET's",
+            subject:
+              "Updated Tentative Schedule for All Common Entrance Tests A.Y. 2024-25	",
+            date: "13/12/2023		",
+            download:
+              "chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://cetcell.mahacet.org/wp-content/uploads/2023/12/English-Notice-CET-2024.pdf",
+          },
+        ]);
+      case "Medical Education":
+        return dynamicData([
+          {
+            id: 1,
+            course: "All CET’s	",
+            subject:
+              "Imp Notice: Dates have been Extended for various courses of CET registration for A.Y 2024-25 (English/Marathi) Dated 06-02-2024	",
+            date: "06/02/2024	",
+            download:
+              "https://cetcell.mahacet.org/wp-content/uploads/2023/12/Important-Notices_Preperatory-CET-2024.pdf",
+          },
+          {
+            id: 2,
+            course: "All CET's",
+            subject: "User Manual Video for CET Registration A.Y. 2024-25",
+            date: "31/01/2024	",
+            download: "https://www.youtube.com/watch?v=UuJSWbIoyGQ",
+          },
+          {
+            id: 3,
+            course: "All CET's	",
+            subject:
+              "Imp Notice: Dates have been Extended for various courses of CET registration for A.Y 2024-25 (English/Marathi) Dated 29-01-2024	",
+            date: "29/01/2024	",
+            download:
+              "chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://cetcell.mahacet.org/wp-content/uploads/2023/12/Online-Application-Notice.pdf",
+          },
+          {
+            id: 4,
+            course: "All CET's	",
+            subject:
+              "As per the new rules for A.Y. 2024-25, the fee structure for CET Registrations for Transgender and Orphan candidates will be the same as that for the Reserved category.	",
+            date: "11/01/2024 ",
+          },
+          {
+            id: 5,
+            course: "All CET's	",
+            subject:
+              "Activity Schedule for all CET Registration for A.Y. 2024-25	.",
+            date: "11/01/2024		",
+            download:
+              "chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://cetcell.mahacet.org/wp-content/uploads/2023/12/Public-Notice.pdf",
+          },
+          {
+            id: 6,
+            course: "All CET's",
+            subject:
+              "Updated Tentative Schedule for All Common Entrance Tests A.Y. 2024-25	",
+            date: "13/12/2023	",
+          },
+        ]);
+      case "AYUSH":
+        return dynamicData([
+          {
+            id: 1,
+            course: "All CET’s	",
+            subject:
+              "Imp Notice: Dates have been Extended for various courses of CET registration for A.Y 2024-25 (English/Marathi) Dated 06-02-2024	",
+            date: "06/02/2024	",
+            download:
+              "https://cetcell.mahacet.org/wp-content/uploads/2023/12/Important-Notices_Preperatory-CET-2024.pdf",
+          },
+          {
+            id: 2,
+            course: "All CET's",
+            subject: "User Manual Video for CET Registration A.Y. 2024-25",
+            date: "31/01/2024	",
+            download: "https://www.youtube.com/watch?v=UuJSWbIoyGQ",
+          },
+          {
+            id: 3,
+            course: "All CET's	",
+            subject:
+              "Imp Notice: Dates have been Extended for various courses of CET registration for A.Y 2024-25 (English/Marathi) Dated 29-01-2024	",
+            date: "29/01/2024		",
+            download:
+              "chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://cetcell.mahacet.org/wp-content/uploads/2023/12/Online-Application-Notice.pdf",
+          },
+          {
+            id: 4,
+            course: "All CET's	",
+            subject:
+              "As per the new rules for A.Y. 2024-25, the fee structure for CET Registrations for Transgender and Orphan candidates will be the same as that for the Reserved category.	",
+            date: "11/01/2024",
+          },
+          {
+            id: 5,
+            course: "All CET's	",
+            subject:
+              "Activity Schedule for all CET Registration for A.Y. 2024-25	",
+            date: "11/01/2024	",
+            download:
+              "chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://cetcell.mahacet.org/wp-content/uploads/2023/12/Public-Notice.pdf",
+          },
+          {
+            id: 6,
+            course: "All CET's",
+            subject:
+              "Updated Tentative Schedule for All Common Entrance Tests A.Y. 2024-25	",
+            date: "13/12/2023	",
+          },
+        ]);
+      default:
+        return dynamicData([
+          {
+            id: 1,
+            course: "LLB 3 Yrs",
+            subject: "Important Notice for Preparatory Passed Candidates.",
+            isNew: true,
+            date: "02/02/2024",
+            download:
+              "https://cetcell.mahacet.org/wp-content/uploads/2023/12/Important-Notices_Preperatory-CET-2024.pdf",
+          },
+          {
+            id: 2,
+            course: "All CET's",
+            subject: "User Manual Video for CET Registration A.Y. 2024-25",
+            isNew: true,
+            date: "31/01/2024	",
+            download: "https://www.youtube.com/watch?v=UuJSWbIoyGQ",
+          },
+          {
+            id: 3,
+            course: "MAH- AAC (Fine Art)",
+            subject:
+              "MAH- AAC (Fine Art) CET 2024 Online Application Notice No.1 (English/Marathi)",
+            isNew: false,
+            date: "30/01/2024	",
+            download:
+              "chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://cetcell.mahacet.org/wp-content/uploads/2023/12/Online-Application-Notice.pdf",
+          },
+          {
+            id: 4,
+            course: "All CET's	",
+            subject:
+              "Imp Notice: Dates have been Extended for various courses of CET registration for A.Y 2024-25 (English/Marathi)",
+            isNew: true,
+            date: "29/01/2024	",
+            download:
+              "chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://cetcell.mahacet.org/wp-content/uploads/2023/12/Extenstion-Notice.pdf",
+          },
+          {
+            id: 5,
+            course: "Higher Courses",
+            subject:
+              "IMP : CLARITY ABOUT BED (2Yr. RegularCourse) , BED-MED (3Yr.Int.Course) and Ba/BScBEd (4Yr. Int.Course ).",
+            date: "12/01/2024	",
+            download:
+              "chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://cetcell.mahacet.org/wp-content/uploads/2023/12/Public-Notice.pdf",
+          },
+          {
+            id: 6,
+            course: "All CET's",
+            subject:
+              "As per the new rules for A.Y. 2024-25, the fee structure for CET Registrations for Transgender and Orphan candidates will be the same as that for the Reserved category.",
+            date: "11/01/2024 ",
+          },
+          {
+            id: 7,
+            course: "All CET's",
+            subject:
+              "Activity Schedule for all CET Registration for A.Y. 2024-25",
+            date: "11/01/2024	",
+            download:
+              "chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://cetcell.mahacet.org/wp-content/uploads/2023/12/English-Notice-CET-2024.pdf",
+          },
+          {
+            id: 8,
+            course: "MHT CET, MBA/MMS, MCA, M.Arch, M.HMCT, B.HMCT, B.Design",
+            subject:
+              "Click Here To View Syllabus of All Courses Under Technical Education A.Y. 2024-25",
+            date: "01/01/2024",
+            download:
+              "chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://cetcell.mahacet.org/wp-content/uploads/2023/08/Technical_Education_CET_syllabus2024-25.pdf",
+          },
+          {
+            id: 9,
+            course: "All CET's",
+            subject:
+              "Updated Tentative Schedule for All Common Entrance Tests A.Y. 2024-25",
+            date: "13/12/2023	",
+            download:
+              "chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://cetcell.mahacet.org/wp-content/uploads/2023/08/CETCELL_Tentative_CET_Schedule2024-25.pdf",
+          },
+        ]);
+    }
+  }
+});
+tableSection.appendChild(menuContainer);
+aboutSection.appendChild(tableSection);
+
+//create a dynamic table
+
+const table = document.createElement("table");
+table.style.width = "100%";
+table.className = "table my-2 table-bordered border-dark border-end";
+const tableHead = document.createElement("thead");
+const tableHeadTr = document.createElement("tr");
+
+const tableBody = document.createElement("tbody");
+
+const tableHeadData = [
+  { title: "SN", width: 20 },
+  { title: "Coures Name", width: 200 },
+  { title: "subject", width: 500 },
+  { title: "Published Date", width: 150 },
+  { title: "Download", width: 50 },
+];
+
+tableHeadData.forEach(function (th) {
+  const tableHeadTrTh = document.createElement("th");
+  tableHeadTrTh.className = "bg-warning";
+  if (th.title === "SN") {
+    tableHeadTrTh.style.textAlign = "center";
+  }
+  tableHeadTrTh.innerText = th.title;
+  tableHeadTrTh.style.width = `${th.width}px`;
+  tableHeadTrTh.style.fontWeight = "400";
+
+  tableHeadTr.appendChild(tableHeadTrTh);
+});
+
+//cretae a button 
+
+const loadMoreBtn=document.createElement("button")
+loadMoreBtn.innerText="Load More"
+loadMoreBtn.style.height="40px"
+loadMoreBtn.style.fontSize="14px"
+loadMoreBtn.style.width="120px"
+loadMoreBtn.style.padding="8px 20px"
+loadMoreBtn.style.marginLeft="5px"
+loadMoreBtn.style.background="#204590"
+loadMoreBtn.className="rounded-1 fw-bold text-white border-0"
+tableHead.appendChild(tableHeadTr);
+table.appendChild(tableHead);
+table.appendChild(tableBody);
+menuContainer.appendChild(table);
+menuContainer.appendChild(loadMoreBtn)
+
 
 //last part
 
-const bundleScript = document.createElement("script")
-bundleScript.src = "https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-bundleScript.integrity = "sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-bundleScript.crossOrigin = "anonymous"
+const bundleScript = document.createElement("script");
+bundleScript.src =
+  "https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js";
+bundleScript.integrity =
+  "sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM";
+bundleScript.crossOrigin = "anonymous";
 
-document.body.appendChild(bundleScript)
+document.body.appendChild(bundleScript);
