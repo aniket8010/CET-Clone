@@ -172,40 +172,113 @@
       footer.style.background = "#163269";
 
       const footercontainer = document.createElement("div");
-      footercontainer.className = "row mx-auto";
-      footercontainer.style.width = "80%";
+      footercontainer.className = "row mx-auto d-flex justify-content-between";
+      footercontainer.style.width = "85%";
 
       const footercontainer1 = document.createElement("div");
       footercontainer1.className = "col-12 col-lg-3";
       const footercontainer1H2 = document.createElement("h4");
       footercontainer1H2.innerText = "Address";
-      footercontainer1H2.style.color="#EEC641"
-      footercontainer1H2.className="my-3"
+      footercontainer1H2.style.color = "#EEC641";
+      footercontainer1H2.className = "my-3";
 
-      const footercontainer1Location=document.createElement("div")
-      footercontainer1Location.style.fontSize="17px"
-      footercontainer1Location.className="d-flex text-white mb-3"
-      footercontainer1Location.innerHTML='<i style="color:#EEC641;margin-right: 15px;padding-top: 8px;" class="fa fa-map-marker" aria-hidden="true"></i> 8th Floor, New Excelsior Building, A. K. Nayak Marg, Fort,Mumbai- 400 001'
+      const footercontainer1Location = document.createElement("div");
+      footercontainer1Location.style.fontSize = "17px";
+      footercontainer1Location.className = "d-flex text-white mb-3";
+      footercontainer1Location.innerHTML =
+        '<i style="color:#EEC641;margin-right: 15px;padding-top: 8px;" class="fa fa-map-marker" aria-hidden="true"></i> 8th Floor, New Excelsior Building , A. K. Nayak Marg , Fort , Mumbai- 400 001';
 
-      const footercontainer1Phone1=document.createElement("div")
-      footercontainer1Phone1.style.fontSize="17px"
-      footercontainer1Phone1.className="d-flex text-white mb-3"
-      footercontainer1Phone1.innerHTML='<i style="color:#EEC641;margin-right: 15px;" class="fa fa-phone" aria-hidden="true"></i> 07969134401, 07969134402'
+      const footercontainer1Phone1 = document.createElement("div");
+      footercontainer1Phone1.style.fontSize = "17px";
+      footercontainer1Phone1.className = "d-flex text-white mb-3";
+      footercontainer1Phone1.innerHTML =
+        '<i style="color:#EEC641;margin-right: 15px;" class="fa fa-phone" aria-hidden="true"></i> 07969134401, 07969134402';
 
-      const footercontainer1Phone2=document.createElement("div")
-      footercontainer1Phone2.style.fontSize="17px"
-      footercontainer1Phone2.className="d-flex text-white mb-3"
-      footercontainer1Phone2.innerHTML='<i style="color:#EEC641;margin-right: 15px;" class="fa fa-phone" aria-hidden="true"></i> Toll free number- 18002090191'
+      const footercontainer1Phone2 = document.createElement("div");
+      footercontainer1Phone2.style.fontSize = "17px";
+      footercontainer1Phone2.className = "d-flex text-white mb-3";
+      footercontainer1Phone2.innerHTML =
+        '<i style="color:#EEC641;margin-right: 15px;" class="fa fa-phone" aria-hidden="true"></i> Toll free number- 18002090191';
 
-      const footercontainer1www=document.createElement("div")
-      footercontainer1www.style.fontSize="17px"
-      footercontainer1www.className="d-flex text-white mb-3"
-      footercontainer1www.innerHTML='<i style="color:#EEC641;margin-right: 15px;" class="fa fa-globe" aria-hidden="true"></i> www.mahacet.org'
+      const footercontainer1www = document.createElement("div");
+      footercontainer1www.style.fontSize = "17px";
+      footercontainer1www.className = "d-flex text-white mb-3";
+      footercontainer1www.innerHTML =
+        '<i style="color:#EEC641;margin-right: 15px;" class="fa fa-globe" aria-hidden="true"></i> www.mahacet.org';
 
       const footercontainer2 = document.createElement("div");
       footercontainer2.className = "col-12 col-lg-3";
+      const footercontainer2H4 = document.createElement("h4");
+      footercontainer2H4.innerText = "Quick Links";
+      footercontainer2H4.style.color = "#EEC641";
+      footercontainer2H4.className = "my-3";
+
+      const footercontainer2Row = document.createElement("div");
+      footercontainer2Row.className = "row d-flex justify-content-between";
+      const footercontainer2RowCol1 = document.createElement("div");
+      footercontainer2RowCol1.className = "col-12 col-lg-5 text-white";
+      footercontainer2RowCol1.style.fontSize = "17px";
+      footercontainer2RowCol1.style.cursor = "pointer";
+      const footercontainer2RowCol1UlLi1 = document.createElement("li");
+      footercontainer2RowCol1UlLi1.style.listStyle = "none";
+      footercontainer2RowCol1UlLi1.style.marginTop = "20px";
+      footercontainer2RowCol1UlLi1.innerHTML = `<i style="color:#EEC641;margin-right: 10px;font-size: 12px;" class="fa fa-chevron-right" aria-hidden="true"></i>Home`;
+
+      const footercontainer2RowCol1UlLi2 = document.createElement("li");
+      footercontainer2RowCol1UlLi2.style.listStyle = "none";
+      footercontainer2RowCol1UlLi2.style.marginTop = "10px";
+      footercontainer2RowCol1UlLi2.innerHTML = `<i style="color:#EEC641;margin-right: 10px;font-size: 12px;" class="fa fa-chevron-right" aria-hidden="true"></i>About Us`;
+
+      const footercontainer2RowCol1UlLi3 = document.createElement("li");
+      footercontainer2RowCol1UlLi3.style.listStyle = "none";
+      footercontainer2RowCol1UlLi3.style.marginTop = "10px";
+      footercontainer2RowCol1UlLi3.innerHTML = `<i style="color:#EEC641;margin-right: 10px;font-size: 12px;" class="fa fa-chevron-right" aria-hidden="true"></i>CET`;
+
+      const footercontainer2RowCol1UlLi4 = document.createElement("li");
+      footercontainer2RowCol1UlLi4.style.listStyle = "none";
+      footercontainer2RowCol1UlLi4.style.marginTop = "10px";
+      footercontainer2RowCol1UlLi4.innerHTML = `<i style="color:#EEC641;margin-right: 10px;font-size: 12px;" class="fa fa-chevron-right" aria-hidden="true"></i>Admission`;
+
+      const footercontainer2RowCol2 = document.createElement("div");
+      footercontainer2RowCol2.className = "col-12 col-lg-7 text-white";
+      footercontainer2RowCol2.style.fontSize = "17px";
+      footercontainer2RowCol2.style.cursor = "pointer";
+
+      const footercontainer2RowCol2UlLi1 = document.createElement("li");
+      footercontainer2RowCol2UlLi1.style.listStyle = "none";
+      footercontainer2RowCol2UlLi1.style.marginTop = "20px";
+      footercontainer2RowCol2UlLi1.innerHTML = `<i style="color:#EEC641;margin-right: 10px;font-size: 12px;" class="fa fa-chevron-right" aria-hidden="true"></i>Search Institute`;
+
+      const footercontainer2RowCol2UlLi2 = document.createElement("li");
+      footercontainer2RowCol2UlLi2.style.listStyle = "none";
+      footercontainer2RowCol2UlLi2.style.marginTop = "10px";
+      footercontainer2RowCol2UlLi2.innerHTML = `<i style="color:#EEC641;margin-right: 10px;font-size: 12px;" class="fa fa-chevron-right" aria-hidden="true"></i>CET Statictics`;
+
+      const footercontainer2RowCol2UlLi3 = document.createElement("li");
+      footercontainer2RowCol2UlLi3.style.listStyle = "none";
+      footercontainer2RowCol2UlLi3.style.marginTop = "10px";
+      footercontainer2RowCol2UlLi3.innerHTML = `<i style="color:#EEC641;margin-right: 10px;font-size: 12px;" class="fa fa-chevron-right" aria-hidden="true"></i>CAP Statictics`;
+
+      const footercontainer2RowCol2UlLi4 = document.createElement("li");
+      footercontainer2RowCol2UlLi4.style.listStyle = "none";
+      footercontainer2RowCol2UlLi4.style.marginTop = "10px";
+      footercontainer2RowCol2UlLi4.innerHTML = `<i style="color:#EEC641;margin-right: 10px;font-size: 12px;" class="fa fa-chevron-right" aria-hidden="true"></i>Contact`;
+
       const footercontainer3 = document.createElement("div");
       footercontainer3.className = "col-12 col-lg-3";
+
+      const footercontainer3H4 = document.createElement("h4");
+      footercontainer3H4.innerText = "Visitor Counter";
+      footercontainer3H4.style.color = "#EEC641";
+      footercontainer3H4.className = "my-3";
+      const footercontainer3H41 = document.createElement("h4");
+      footercontainer3H41.innerText = "Follow Us On Social Media";
+      footercontainer3H41.style.color = "#EEC641";
+      footercontainer3H41.className = "mt-4";
+
+      const footercontainer3Icon = document.createElement("div");
+      footercontainer3Icon.className = "footericons";
+      footercontainer3Icon.innerHTML = `<i style="background:#BB2226;padding:6px;margin-right: 10px;" class="fa fa-youtube-play text-white fs-5 rounded-1" aria-hidden="true"></i> <i style="background:#375694;padding:7px 11px;margin-right: 10px;" class="fa fa-facebook text-white fs-5 rounded-1" aria-hidden="true"></i> <i style="background:#02050A;padding:8px;margin-right: 10px;" class="fa fa-twitter text-white fs-5 rounded-1" aria-hidden="true"></i> <i style="background:#A30C45;padding:7px 8px;" class="fa fa-instagram text-white fs-5 rounded-1" aria-hidden="true"></i>`;
 
       $(footercontainer1).append(footercontainer1H2);
       $(footercontainer1).append(footercontainer1Location);
@@ -213,10 +286,49 @@
       $(footercontainer1).append(footercontainer1Phone2);
       $(footercontainer1).append(footercontainer1www);
       $(footercontainer).append(footercontainer1);
+
+      $(footercontainer2RowCol1).append(footercontainer2RowCol1UlLi1);
+      $(footercontainer2RowCol1).append(footercontainer2RowCol1UlLi2);
+      $(footercontainer2RowCol1).append(footercontainer2RowCol1UlLi3);
+      $(footercontainer2RowCol1).append(footercontainer2RowCol1UlLi4);
+      $(footercontainer2RowCol2).append(footercontainer2RowCol2UlLi1);
+      $(footercontainer2RowCol2).append(footercontainer2RowCol2UlLi2);
+      $(footercontainer2RowCol2).append(footercontainer2RowCol2UlLi3);
+      $(footercontainer2RowCol2).append(footercontainer2RowCol2UlLi4);
+      $(footercontainer2Row).append(footercontainer2RowCol1);
+      $(footercontainer2Row).append(footercontainer2RowCol2);
+      $(footercontainer2).append(footercontainer2H4);
+      $(footercontainer2).append(footercontainer2Row);
       $(footercontainer).append(footercontainer2);
+
+      $(footercontainer3).append(footercontainer3H4);
+      $(footercontainer3).append(footercontainer3H41);
+      $(footercontainer3).append(footercontainer3Icon);
       $(footercontainer).append(footercontainer3);
       $(footer).append(footercontainer);
       $(root).append(footer);
+
+      //footer last part
+
+      const footerLast = document.createElement("section");
+      footerLast.className = "footerLast";
+      footerLast.style.height = "70px";
+      footerLast.style.width = "100%";
+      footerLast.style.background = "#0C224D";
+      const footerLastContainer = document.createElement("div");
+      footerLastContainer.className = "w-75 mx-auto d-flex align-item-center py-3 justify-content-between";
+      const footerLastContainerSpan = document.createElement("span");
+      footerLastContainerSpan.innerText = "2024,CET Cell All Rights Reserved";
+      footerLastContainerSpan.className="text-white"
+
+      const footerLastContainerAncor = document.createElement("span");
+      footerLastContainerAncor.innerText = "Powered By:Synthesys EduCMS";
+      footerLastContainerAncor.className="text-white"
+
+      $(footerLastContainer).append(footerLastContainerSpan);
+      $(footerLastContainer).append(footerLastContainerAncor);
+      $(footerLast).append(footerLastContainer);
+      $(root).append(footerLast);
     </script>
   </body>
 </html>
