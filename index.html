@@ -26,7 +26,7 @@
       const gallaryTitle = document.createElement("h2");
       $(gallaryTitle).text("Gallary");
       gallaryTitle.style.background = "#163269";
-      gallaryTitle.style.top="-21px"
+      gallaryTitle.style.top = "-21px";
       gallaryTitle.className = "text-white px-3";
 
       $(gallaryContainer).html(
@@ -80,6 +80,143 @@
       $(gallaryContainer).append(gallaryTitle);
       $(gallaryTitle).addClass("position-absolute");
       $(gallary).append(gallaryContainer);
+
+      //create second slider
+
+      const stickers = document.createElement("section");
+      stickers.style.height = "230px";
+      stickers.style.width = "100%";
+
+      const stickersContainer = document.createElement("div");
+      stickersContainer.height = "210px";
+      stickersContainer.style.width = "90%";
+      stickersContainer.className = " mx-auto mt-4";
+      $(stickersContainer).html(`
+      <div id="carouselExampleControls1" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+        <div class="row">
+            <div class="col-12 col-lg-2 ms-auto">
+                <img src="./image/s1.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="col-12 col-lg-2">
+                <img src="./image/s2.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="col-12 col-lg-2">
+                <img src="./image/s3.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="col-12 col-lg-2">
+                <img src="./image/s4.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="col-12 col-lg-2 me-auto">
+                <img src="./image/s5.png" class="d-block w-100" alt="...">
+            </div>
+        </div>
+    </div>
+    <div class="carousel-item">
+      <div class="row">
+            <div class="col-12 col-lg-2 ms-auto">
+                <img src="./image/s6.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="col-12 col-lg-2">
+                <img src="./image/s7.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="col-12 col-lg-2">
+                <img src="./image/s8.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="col-12 col-lg-2">
+                <img src="./image/s9.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="col-12 col-lg-2 me-auto">
+                <img src="./image/s10.png" class="d-block w-100" alt="...">
+            </div>
+        </div>
+    </div>
+    <div class="carousel-item">
+      <div class="row">
+            <div class="col-12 col-lg-2 ms-auto">
+                <img src="./image/s11.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="col-12 col-lg-2">
+                <img src="./image/s12.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="col-12 col-lg-2">
+                <img src="./image/s13.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="col-12 col-lg-2">
+                <img src="./image/s14.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="col-12 col-lg-2 me-auto">
+                <img src="./image/s1.png" class="d-block w-100" alt="...">
+            </div>
+        </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls1" data-bs-slide="prev">
+    <span <i style="color:#BCBCBC; font-size: 25px;" class="fa fa-chevron-left" aria-hidden="true"> </i></span>
+    <span  class="visually-hidden "></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls1" data-bs-slide="next">
+    <span <i style="color:#BCBCBC; font-size: 25px;" class="fa fa-chevron-right" aria-hidden="true"> </i></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+      `);
+      $(stickers).append(stickersContainer);
+      $("main").append(stickers);
+
+      //create footer
+
+      const footer = document.createElement("section");
+      footer.style.widows = "100%";
+      footer.style.background = "#163269";
+
+      const footercontainer = document.createElement("div");
+      footercontainer.className = "row mx-auto";
+      footercontainer.style.width = "80%";
+
+      const footercontainer1 = document.createElement("div");
+      footercontainer1.className = "col-12 col-lg-3";
+      const footercontainer1H2 = document.createElement("h4");
+      footercontainer1H2.innerText = "Address";
+      footercontainer1H2.style.color="#EEC641"
+      footercontainer1H2.className="my-3"
+
+      const footercontainer1Location=document.createElement("div")
+      footercontainer1Location.style.fontSize="17px"
+      footercontainer1Location.className="d-flex text-white mb-3"
+      footercontainer1Location.innerHTML='<i style="color:#EEC641;margin-right: 15px;padding-top: 8px;" class="fa fa-map-marker" aria-hidden="true"></i> 8th Floor, New Excelsior Building, A. K. Nayak Marg, Fort,Mumbai- 400 001'
+
+      const footercontainer1Phone1=document.createElement("div")
+      footercontainer1Phone1.style.fontSize="17px"
+      footercontainer1Phone1.className="d-flex text-white mb-3"
+      footercontainer1Phone1.innerHTML='<i style="color:#EEC641;margin-right: 15px;" class="fa fa-phone" aria-hidden="true"></i> 07969134401, 07969134402'
+
+      const footercontainer1Phone2=document.createElement("div")
+      footercontainer1Phone2.style.fontSize="17px"
+      footercontainer1Phone2.className="d-flex text-white mb-3"
+      footercontainer1Phone2.innerHTML='<i style="color:#EEC641;margin-right: 15px;" class="fa fa-phone" aria-hidden="true"></i> Toll free number- 18002090191'
+
+      const footercontainer1www=document.createElement("div")
+      footercontainer1www.style.fontSize="17px"
+      footercontainer1www.className="d-flex text-white mb-3"
+      footercontainer1www.innerHTML='<i style="color:#EEC641;margin-right: 15px;" class="fa fa-globe" aria-hidden="true"></i> www.mahacet.org'
+
+      const footercontainer2 = document.createElement("div");
+      footercontainer2.className = "col-12 col-lg-3";
+      const footercontainer3 = document.createElement("div");
+      footercontainer3.className = "col-12 col-lg-3";
+
+      $(footercontainer1).append(footercontainer1H2);
+      $(footercontainer1).append(footercontainer1Location);
+      $(footercontainer1).append(footercontainer1Phone1);
+      $(footercontainer1).append(footercontainer1Phone2);
+      $(footercontainer1).append(footercontainer1www);
+      $(footercontainer).append(footercontainer1);
+      $(footercontainer).append(footercontainer2);
+      $(footercontainer).append(footercontainer3);
+      $(footer).append(footercontainer);
+      $(root).append(footer);
     </script>
   </body>
 </html>
